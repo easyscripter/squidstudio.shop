@@ -3,6 +3,22 @@
 @color-text: #fff;
 @font: 'Roboto';
 
+//custom bootstrap styles
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-5 {
+    width: 20%;
+    float: left;
+}
+//styles header
 header {
     display: flex;
     //justify-content: space-around;
@@ -11,7 +27,7 @@ header {
     height: 70px;
     background-color: @color-bg;
     .logo {
-        padding-left: 300px;
+        padding-left: 80px;
         font-family: @font,serif;
         color: @color-text;
         font-size: 40px;
@@ -45,5 +61,101 @@ header {
             padding: 0 10px;
             &:hover { color: @color-text; }
         }
+    }
+}
+
+
+
+
+
+
+
+
+
+//styles footer
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: @color-bg;
+}
+.footer-block {
+    .logo {
+        padding-top: 20px;
+        padding-left: 60px;
+        font-family: @font, sans-serif;
+        color: @color-text;
+        font-size: 40px;
+        font-weight: 800;
+        &-desc {
+            padding-left: 60px;
+            font-family: @font, sans-serif;
+            color: @color-text;
+            font-size: 15px;
+            font-weight: 400;
+        }
+    }
+    ul {
+        //padding-top: 20px;
+        li {   
+           list-style-type: none;
+           font-family: @font, sans-serif;
+           font-size: 15px;
+           a {
+              font-size: 14px;
+              color: grey;
+              text-decoration: none;
+              &:hover { color: @color-text;}
+           }
+        }
+    }
+    .white-list { 
+        padding-top: 40px;
+        padding-bottom: 10px;
+        color: @color-text;
+        
+    }
+    .copyright {
+        padding-top: 60px;
+        padding-left: 60px;
+        font-family: @font, sans-serif;
+        color: @color-text;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .icons-block {
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            color: @color-text;
+        }
+    }
+}
+
+//media queries
+@media (min-width: 768px) {
+    .col-sm-5 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5 {
+        width: 20%;
+        float: left;
+    }
+}
+@media screen and (max-width: 1055px) {
+	.footer-block {
+        text-align: center;
     }
 }
